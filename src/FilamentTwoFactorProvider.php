@@ -15,7 +15,7 @@ class FilamentTwoFactorProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-2fa';
 
-    public function packageConfigure(Package $package): void
+    public function packageConfigured(Package $package): void
     {
         $package->hasRoute('web')
             ->hasMigration('add_two_factor_columns_to_users_table');
@@ -23,6 +23,11 @@ class FilamentTwoFactorProvider extends PackageServiceProvider
         Livewire::component(Auth\Login::getName(), Auth\Login::class);
         Livewire::component(Auth\TwoFactorChallenge::getName(), Auth\TwoFactorChallenge::class);
         Livewire::component('filament-two-factor-form', TwoFactorAuthenticationForm::class);
+    }
+
+    public function configurePackage(Package $package): void
+    {
+        //
     }
 
     public function packageBooted(): void
