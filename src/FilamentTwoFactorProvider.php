@@ -29,7 +29,7 @@ class FilamentTwoFactorProvider extends PackageServiceProvider
     {
         $package
             ->name('filament-2fa')
-            ->hasConfigFile()
+            ->hasConfigFile(['filament-2fa'])
             ->hasViews();
     }
 
