@@ -27,7 +27,10 @@ class FilamentTwoFactorProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        //
+        $package
+            ->name('filament-2fa')
+            ->hasConfigFile()
+            ->hasViews();
     }
 
     public function packageBooted(): void
