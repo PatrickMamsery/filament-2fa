@@ -4,14 +4,14 @@ namespace Webbingbrasil\FilamentTwoFactor;
 
 use Filament\Facades\Filament;
 use Filament\Navigation\UserMenuItem;
-use Filament\PluginServiceProvider;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Webbingbrasil\FilamentTwoFactor\Http\Livewire\Auth;
 use Webbingbrasil\FilamentTwoFactor\Http\Livewire\TwoFactorAuthenticationForm;
 use Webbingbrasil\FilamentTwoFactor\Pages\TwoFactor;
 
-class FilamentTwoFactorProvider extends PluginServiceProvider
+class FilamentTwoFactorProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-2fa';
 
