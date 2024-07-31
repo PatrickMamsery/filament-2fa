@@ -15,7 +15,7 @@ class FilamentTwoFactorProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-2fa';
 
-    public function packageConfigured(Package $package): void
+    public function packageConfigure(Package $package): void
     {
         $package->hasRoute('web')
             ->hasMigration('add_two_factor_columns_to_users_table');
